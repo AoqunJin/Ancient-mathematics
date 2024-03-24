@@ -1,0 +1,359 @@
+/* styles.css */
+
+/* 重置样式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f0e3;
+  /* 古书风格的背景色 */
+}
+
+/* 标题样式 */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4d3319;
+  /* 古书风格的标题颜色 */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* 导航栏样式 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #d7c9b3;
+  /* 古书风格的导航栏背景色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4d3319;
+  /* 古书风格的链接颜色 */
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #8c6239;
+  /* 古书风格的链接悬停颜色 */
+}
+
+/* 主视觉区样式 */
+.hero {
+  height: 80vh;
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(141, 109, 81, 0.8);
+  /* 古书风格的内容背景色 */
+  border-radius: 8px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #f8f0e3;
+  /* 古书风格的标题颜色 */
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #f8f0e3;
+  /* 古书风格的文本颜色 */
+}
+
+.hero-content button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #8c6239;
+  /* 古书风格的按钮背景色 */
+  color: #f8f0e3;
+  /* 古书风格的按钮文本颜色 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #6d4d2e;
+  /* 古书风格的按钮悬停颜色 */
+}
+
+/* 成就介绍样式 */
+.achievements {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.achievement-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.card {
+  max-width: 300px;
+  margin: 1rem;
+  padding: 1.5rem;
+  background-color: #f8f0e3;
+  /* 古书风格的卡片背景色 */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* 时间轴样式 */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #8c6239;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #d7c9b3 5px, #d7c9b3 10px);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-event {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f0e3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #8c6239;
+  color: #f8f0e3;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-date time {
+  background-color: #d7c9b3;
+  color: #4d3319;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.timeline-content {
+  padding: 1rem;
+}
+
+/* 标题居中样式 */
+.section-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 2px;
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, #d7c9b3 10px, #d7c9b3 20px);
+}
+
+.section-title::before {
+  left: 0;
+}
+
+.section-title::after {
+  right: 0;
+}
+
+/* 视频播放器样式 */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.video-player {
+  max-width: 500px;
+  background-color: #f8f0e3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
+.video-player video {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f8f0e3;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.video-player:hover .video-overlay {
+  transform: translateY(0);
+}
+
+.hero {
+  height: 100vh;
+  /* 设置主视觉区域占据整个视口高度 */
+  background-image: url('logo.png');
+  /* 替换为您自己的背景图片 */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* 固定背景图片,实现视差滚动效果 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  /* 为内容区添加相对定位 */
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: rgba(141, 109, 81, 0.8);
+  border-radius: 8px;
+  position: relative;
+  /* 为内容区添加相对定位 */
+  z-index: 1;
+  /* 确保内容区在背景图片上层 */
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #f8f0e3;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #f8f0e3;
+}
+
+.hero-content button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #8c6239;
+  color: #f8f0e3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #6d4d2e;
+}
+
+/* 其他样式... */
